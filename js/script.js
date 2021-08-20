@@ -4,24 +4,32 @@ project 1 - A Random Quote Generator
 ******************************************/
 
 // For assistance: 
-  // Check the "Project Resources" section of the project instructions
-  // Reach out in your Slack community - https://treehouse-fsjs-102.slack.com/app_redirect?channel=chit-chat
+// Check the "Project Resources" section of the project instructions
+// Reach out in your Slack community - https://treehouse-fsjs-102.slack.com/app_redirect?channel=chit-chat
 
 /*** 
  * `quotes` array 
 ***/
+const quotes = [
 
+];
 
 
 /***
  * `getRandomQuote` function
 ***/
+function getRandomQuote() {
 
+}
 
 
 /***
  * `printQuote` function
 ***/
+function printQuote() {
+  let html;
+  document.querySelector('main').innerHTML = html;
+}
 
 
 
