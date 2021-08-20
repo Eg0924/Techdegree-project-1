@@ -11,24 +11,52 @@ project 1 - A Random Quote Generator
  * `quotes` array 
 ***/
 const quotes = [
-
+  {
+    quote: 'SUCCESS IS NOT FINAL; FAILURE IS FATAL: IT IS THE COURAGE TO CONTINUE THAT COUNTS',
+    source: 'Winston Churchill',
+    citation: 'Commencement Speech Miami University ',
+    year: '1946'
+  },
+  {
+    quote: 'Learn as if you will live forever, live like you will die tomorrow.',
+    source: 'Mahatma Gandhi'
+  },
+  {
+    quote: 'Develop success from failures. Discouragement and failure are two of the surest stepping stones to success.',
+    source: 'Dale Carnegie'
+  },
+  {
+    quote: 'Opportunity is missed by most people because it is dressed in overalls and looks like work.',
+    source: 'Thomas Edison'
+  },
+  {
+    quote: 'He is a wise man who does not grieve for the things which he has not, but rejoices for those which he has.',
+    source: 'Epictetus',
+    citation: 'Greece',
+    year: '110'
+  },
+  {
+    quote: 'People often say that motivation doesn’t last. Well, neither does bathing – that’s why we recommend it daily.',
+    source: 'Zig Ziglar'
+  }
 ];
 
 
 /***
  * `getRandomQuote` function
 ***/
-function getRandomQuote() {
-
+function getRandomQuote(arr) {
+  let randomQuote = Math.floor(Math.random() * arr.length);
+  return arr[randomQuote].quote;
 }
-
+//console.log(getRandomQuote(quotes));
 
 /***
  * `printQuote` function
 ***/
 function printQuote() {
-  let html;
-  document.querySelector('main').innerHTML = html;
+  let html = getRandomQuote(quotes);
+
 }
 
 
