@@ -33,7 +33,8 @@ const quotes = [
     quote: 'He is a wise man who does not grieve for the things which he has not, but rejoices for those which he has.',
     source: 'Epictetus',
     citation: 'Greece',
-    year: '110'
+    year: '110',
+    tags: 'Wisdom'
   },
   {
     quote: 'People often say that motivation doesn’t last. Well, neither does bathing – that’s why we recommend it daily.',
@@ -96,9 +97,10 @@ function printQuote() {
   let html = `<p class = "quote" >${quoteObj.quote}</p> 
               <p class = 'source'>${quoteObj.source}`;
 
-  if (quoteObj.hasOwnProperty('citation') && quoteObj.hasOwnProperty('year')) {
+  if (quoteObj.hasOwnProperty('citation') && quoteObj.hasOwnProperty('year') && quoteObj.hasOwnProperty('tags')) {
     html += `<span class = 'citation'>${quoteObj.citation}</span>
              <span class = 'year'>${quoteObj.year}</span>
+             <span class = 'tags'><strong>${quoteObj.tags}</strong></span>
              </p>`;
   } else {
     html += `</p>`;
