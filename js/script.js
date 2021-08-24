@@ -38,6 +38,18 @@ const quotes = [
   {
     quote: 'People often say that motivation doesn’t last. Well, neither does bathing – that’s why we recommend it daily.',
     source: 'Zig Ziglar'
+  },
+  {
+    quote: 'We cannot solve problems with the kind of thinking we employed when we came up with them.',
+    source: 'Albert Einstein'
+  },
+  {
+    quote: 'It is only when we take chances, when our lives improve. The initial and the most difficult risk that we need to take is to become honest.',
+    source: 'Walter Anderson'
+  },
+  {
+    quote: 'Success is peace of mind, which is a direct result of self-satisfaction in knowing you made the effort to become the best of which you are capable.',
+    source: 'John Wooden'
   }
 ];
 
@@ -50,7 +62,22 @@ function getRandomQuote(arr) {
   return arr[randomQuote];
 }
 
+// // Function to modify the background color for each quote
 
+//Function to get a random value!
+function getRandomValue() {
+
+  const randNum = Math.floor(Math.random() * 256);
+
+  return randNum;
+}
+//Function to return an RBG value by calling the Random Value function.
+function getRandomRGB() {
+
+  const color = `rgb(${getRandomValue()}, ${getRandomValue()}, ${getRandomValue()})`;
+
+  return color;
+}
 /***
  * `printQuote` function
 ***/
@@ -69,6 +96,9 @@ function printQuote() {
   }
 
   document.getElementById('quote-box').innerHTML = html;
+
+  document.body.style.background = getRandomRGB();
+
 }
 
 
