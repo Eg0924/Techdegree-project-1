@@ -56,30 +56,39 @@ const quotes = [
 
 /***
  * `getRandomQuote` function
+ * @returns {object} Returns an object by returning an index location inside the array.
 ***/
+
 function getRandomQuote(arr) {
   let randomQuote = Math.floor(Math.random() * arr.length);
   return arr[randomQuote];
 }
 
 // // Function to modify the background color for each quote
-
-//Function to get a random value!
+// @ returns {number} Returns a random number between 0 and 256!
+// Function to get a random value!
 function getRandomValue() {
 
   const randNum = Math.floor(Math.random() * 256);
 
   return randNum;
 }
+
+
 //Function to return an RBG value by calling the Random Value function.
+// @ returns {string literal} returns a string literal with 3 random rgb values!
 function getRandomRGB() {
 
   const color = `rgb(${getRandomValue()}, ${getRandomValue()}, ${getRandomValue()})`;
 
   return color;
 }
+
+
 /***
  * `printQuote` function
+ *  Prints an object and its properties from an array into the HTML.
+ *  calls the getRandomRGB function to change the background color on the HTML.
 ***/
 function printQuote() {
   let quoteObj = getRandomQuote(quotes);
