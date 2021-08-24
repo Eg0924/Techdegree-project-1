@@ -47,16 +47,28 @@ const quotes = [
 ***/
 function getRandomQuote(arr) {
   let randomQuote = Math.floor(Math.random() * arr.length);
-  return arr[randomQuote].quote;
+  return arr[randomQuote];
 }
-//console.log(getRandomQuote(quotes));
+
 
 /***
  * `printQuote` function
 ***/
 function printQuote() {
-  let html = getRandomQuote(quotes);
+  let quoteObj = getRandomQuote(quotes);
 
+  let html = `<p class = "quote" >${quoteObj.quote}</p> 
+              <p class = 'source'>${quoteObj.source}`;
+
+  if (quoteObj.hasOwnProperty('citation') && quoteObj.hasOwnProperty('year')) {
+    html += `<span class = 'citation'>${quoteObj.citation}</span>
+             <span class = 'year'>${quoteObj.year}</span>
+             </p>`;
+  } else {
+    html += `</p>`;
+  }
+
+  document.getElementById('quote-box').innerHTML = html;
 }
 
 
