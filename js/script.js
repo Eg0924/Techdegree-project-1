@@ -112,7 +112,15 @@ function printQuote() {
 
 }
 
+// Function setInterval to change the quotes every 10 seconds.
+// returns a variable that calls the printQuote function every 10 seconds.
+function setTimer() {
+  let timer = setInterval(printQuote, 10000);
 
+  return timer;
+}
+
+setTimer();
 
 /***
  * click event listener for the print quote button
