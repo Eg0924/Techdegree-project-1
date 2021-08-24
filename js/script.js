@@ -78,6 +78,7 @@ function getRandomValue() {
 
 //Function to return an RBG value by calling the Random Value function.
 // @ returns {string literal} returns a string literal with 3 random rgb values!
+// Code Taken from one of the refactoring samples in the  treehouse course.
 function getRandomRGB() {
 
   const color = `rgb(${getRandomValue()}, ${getRandomValue()}, ${getRandomValue()})`;
