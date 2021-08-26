@@ -97,15 +97,13 @@ function printQuote() {
 
   let html = `<p class = "quote" >${quoteObj.quote}</p> 
               <p class = "source">${quoteObj.source}`;
-
+  //  IF statements to add properties to the html string based on availailability.
   if (quoteObj.hasOwnProperty('citation')) {
     html += `<span class = "citation">${quoteObj.citation}</span>`;
   } if (quoteObj.hasOwnProperty('year')) {
     html += `<span class = "year">${quoteObj.year}</span>`;
   } if (quoteObj.hasOwnProperty('tags')) {
-    html += `<span class = "tags"><strong>${quoteObj.tags}</strong></span>`;
-  } else {
-    html += `</p>`;
+    html += `<span class = "tags">${quoteObj.tags}</span>`;
   }
 
   html += `</p>`;
