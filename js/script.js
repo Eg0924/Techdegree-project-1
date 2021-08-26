@@ -27,7 +27,8 @@ const quotes = [
   },
   {
     quote: 'Opportunity is missed by most people because it is dressed in overalls and looks like work.',
-    source: 'Thomas Edison'
+    source: 'Thomas Edison',
+    tags: 'Motivation'
   },
   {
     quote: 'He is a wise man who does not grieve for the things which he has not, but rejoices for those which he has.',
@@ -103,7 +104,7 @@ function printQuote() {
   } if (quoteObj.hasOwnProperty('year')) {
     html += `<span class = "year">${quoteObj.year}</span>`;
   } if (quoteObj.hasOwnProperty('tags')) {
-    html += `<span class = "tags">${quoteObj.tags}</span>`;
+    html += `<span class = "tags"> ${quoteObj.tags}</span>`;
   }
 
   html += `</p>`;
