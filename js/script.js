@@ -96,20 +96,23 @@ function printQuote() {
   let quoteObj = getRandomQuote(quotes);
 
   let html = `<p class = "quote" >${quoteObj.quote}</p> 
-              <p class = 'source'>${quoteObj.source}`;
+              <p class = "source">${quoteObj.source}`;
 
-  if (quoteObj.hasOwnProperty('citation') && quoteObj.hasOwnProperty('year') && quoteObj.hasOwnProperty('tags')) {
-    html += `<span class = 'citation'>${quoteObj.citation}</span>
-             <span class = 'year'>${quoteObj.year}</span>
-             <span class = 'tags'><strong>${quoteObj.tags}</strong></span>
-             </p>`;
+  if (quoteObj.hasOwnProperty('citation')) {
+    html += `<span class = "citation">${quoteObj.citation}</span>`;
+  } if (quoteObj.hasOwnProperty('year')) {
+    html += `<span class = "year">${quoteObj.year}</span>`;
+  } if (quoteObj.hasOwnProperty('tags')) {
+    html += `<span class = "tags"><strong>${quoteObj.tags}</strong></span>`;
   } else {
     html += `</p>`;
   }
 
-  document.getElementById('quote-box').innerHTML = html;
+  html += `</p>`;
 
   document.body.style.background = getRandomRGB();
+
+  return document.getElementById('quote-box').innerHTML = html;
 
 }
 
